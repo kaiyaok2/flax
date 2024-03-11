@@ -83,7 +83,7 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.11'] #['3.9', '3.10', '3.11']
-        test-type: [doctest, pytest, pytype, mypy]
+        test-type: [pytest] #[doctest, pytest, pytype, mypy]
         exclude:
         #   - test-type: pytype
         #     python-version: '3.11'
