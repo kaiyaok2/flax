@@ -83,14 +83,14 @@ jobs:
     strategy:
       matrix:
         python-version: ['3.11'] #['3.9', '3.10', '3.11']
-        test-type: ['pytest'] #[doctest, pytest, pytype, mypy]
+        test-type: [doctest, pytest, pytype, mypy]
         # exclude:
         #   - test-type: pytype
         #     python-version: '3.11'
         #   - test-type: pytype
         #     python-version: '3.10'
-        #   - test-type: mypy
-        #     python-version: '3.11'
+          - test-type: mypy
+            python-version: '3.11'
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python ${{ matrix.python-version }}
